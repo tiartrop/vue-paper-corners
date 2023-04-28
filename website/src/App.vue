@@ -10,7 +10,7 @@ const graph =
   'linear-gradient(rgb(233, 233, 233) 1px, transparent 0) 0 center / 20px 20px, linear-gradient(to right, rgb(233, 233, 233) 1px, #fff 0) 0 0 / 20px 20px;';
 const dot =
   'radial-gradient(rgb(233, 233, 233) 2px, transparent 0) 0 0 / 20px 20px, radial-gradient(rgb(233, 233, 233) 2px, #fff 2px)  0 0 / 20px 20px;';
-const paper = 'url(src/assets/paper-bg.png) repeat';
+const paper = import.meta.env.DEV ? 'url(src/assets/paper-bg.png) repeat' : 'url(assets/paper-bg.png) repeat';
 
 const size = ref(30);
 const color = ref('#fff');
