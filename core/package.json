@@ -1,0 +1,28 @@
+{
+  "name": "vue-paper-corners",
+  "version": "1.0.0",
+  "description": "A Vue 3.0+ component for adding a paper corner to your project page.",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
+  "homepage": "https://tiartrop.github.io/vue-paper-corners",
+  "license": "MIT",
+  "files": [
+    "cjs",
+    "esm"
+  ],
+  "keywords": [
+    "vue",
+    "vue3",
+    "corners"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tiartrop/vue-paper-corners"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "devDependencies": {
+    "vue": "^3.0.0"
+  }
+}

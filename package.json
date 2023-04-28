@@ -1,0 +1,25 @@
+{
+  "name": "vue-paper-corners",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "start": "lerna exec \"npm run dev\" --scope website",
+    "build:website": "lerna exec \"npm run build\" --scope website",
+    "build": "lerna exec \"tsbb build src/*.tsx --use-vue --use-babel --bail\" --scope vue-paper-corners",
+    "watch": "lerna exec \"tsbb watch src/*.tsx --use-vue --use-babel\" --scope vue-paper-corners",
+    "prettier": "prettier --write \"**/*.{js,jsx,vue,tsx,ts,less,md,json}\"",
+    "version": "lerna version --exact --force-publish --no-push --no-git-tag-version",
+    "clean": "lerna clean --yes",
+    "hoist": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap --force-local --no-ci"
+  },
+  "author": "tiartrop",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "7.0.4",
+    "prettier": "2.5.1",
+    "pretty-quick": "3.1.2",
+    "lerna": "^6.6.1",
+    "tsbb": "^4.1.5"
+  }
+}

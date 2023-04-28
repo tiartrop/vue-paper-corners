@@ -1,0 +1,68 @@
+.corner-container {
+  position: relative;
+}
+
+.corner-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  aspect-ratio: 2;
+}
+
+.corner-box div {
+  width: 0px;
+  height: 0px;
+}
+
+.corner-shadow {
+  border-style: solid;
+  border-color: transparent transparent #999 transparent;
+  opacity: 0.5;
+  float: left;
+  z-index: 10;
+}
+
+.corner-square {
+  border-style: solid;
+  float: left;
+}
+
+.corner-cut {
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  position: relative;
+  opacity: 0.5;
+  z-index: 10;
+  float: left;
+}
+
+/* bottom-left */
+.corner-box.left {
+  left: 0;
+}
+.corner-shadow.left,
+.corner-square.left,
+.corner-cut.left {
+  transform: rotateY(180deg);
+  float: right;
+}
+.corner-cut.left {
+  left: unset !important;
+}
+
+/* top-right  */
+.corner-box.top {
+  top: 0;
+}
+.corner-shadow.top,
+.corner-square.top,
+.corner-cut.top {
+  transform: rotateX(180deg);
+}
+
+/* top-left  */
+.corner-shadow.left.top,
+.corner-square.left.top,
+.corner-cut.left.top {
+  transform: rotateX(180deg) rotateY(180deg);
+}

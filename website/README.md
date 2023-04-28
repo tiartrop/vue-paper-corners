@@ -1,0 +1,1 @@
+Demo for [vue-papers-corners](https://github.com/tiartrop/vue-paper-corners).
