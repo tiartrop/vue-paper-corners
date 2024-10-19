@@ -1,8 +1,9 @@
 {
-  "extends": "../tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "cjs",
-    "noEmit": false
-  }
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "outDir": "cjs"
+  },
+  "extends": "../tsconfig"
 }
