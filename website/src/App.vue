@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import PaperCorners from 'vue-paper-corners';
 import pkg from 'vue-paper-corners/package.json';
 import ReadMe from 'vue-paper-corners/README.md';
+import paperPng from './assets/paper-bg.png';
 
 const { description } = pkg;
 const link = 'https://github.com/tiartrop/vue-paper-corners';
@@ -10,7 +11,7 @@ const graph =
   'linear-gradient(rgba(212,  212 , 212, .4) 1px, transparent 0) 0 center / 20px 20px, linear-gradient(to right, rgba(212,  212 , 212, .4) 1px, var(--text-bg-primary) 0) 0 0 / 20px 20px;';
 const dot =
   'radial-gradient(rgba(212,  212 , 212, .15) 2px, transparent 0) 0 0 / 20px 20px, radial-gradient(rgba(212,  212 , 212, .15) 2px, var(--text-bg-primary) 2px)  0 0 / 20px 20px;';
-const paper = import.meta.env.DEV ? 'url(src/assets/paper-bg.png) repeat' : 'url(assets/paper-bg.png) repeat';
+const paper = `url("${paperPng}")`;
 
 const size = ref(30);
 const color = ref('var(--text-bg-primary)');
