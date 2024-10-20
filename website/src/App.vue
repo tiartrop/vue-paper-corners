@@ -3,15 +3,15 @@ import { ref } from 'vue';
 import PaperCorners from 'vue-paper-corners';
 import pkg from 'vue-paper-corners/package.json';
 import ReadMe from 'vue-paper-corners/README.md';
-import paperPng from './assets/paper-bg.png';
+import patternPng from './assets/pattern.png';
 
 const { description } = pkg;
 const link = 'https://github.com/tiartrop/vue-paper-corners';
 const graph =
-  'linear-gradient(rgba(212,  212 , 212, .4) 1px, transparent 0) 0 center / 20px 20px, linear-gradient(to right, rgba(212,  212 , 212, .4) 1px, var(--text-bg-primary) 0) 0 0 / 20px 20px;';
+  'linear-gradient(rgba(212,  212 , 212, .35) 1px, transparent 0) 0 center / 20px 20px, linear-gradient(to right, rgba(212,  212 , 212, .35) 1px, var(--text-bg-primary) 0) 0 0 / 20px 20px;';
 const dot =
   'radial-gradient(rgba(212,  212 , 212, .15) 2px, transparent 0) 0 0 / 20px 20px, radial-gradient(rgba(212,  212 , 212, .15) 2px, var(--text-bg-primary) 2px)  0 0 / 20px 20px;';
-const paper = `url("${paperPng}")`;
+const pattern = `url("${patternPng}")`;
 
 const size = ref(30);
 const color = ref('var(--text-bg-primary)');
@@ -48,8 +48,8 @@ const positionY = ref<'top' | 'bottom'>('bottom');
       <div class="button">
         <button @click="color = graph">Graph</button>
         <button @click="color = dot">Dot</button>
-        <button @click="color = paper">Paper</button>
-        <button @click="color = 'var(--text-bg-primary)'">Default</button>
+        <button @click="color = pattern">Pattern</button>
+        <button @click="color = 'var(--text-bg-primary)'">Solid</button>
       </div>
     </header>
     <div class="markdown-body markdown">
